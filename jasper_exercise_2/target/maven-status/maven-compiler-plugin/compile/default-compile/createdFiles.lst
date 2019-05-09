@@ -1,0 +1,7 @@
+comjadulco\jasper_exercise_2\JasperExercise2Application.class
+comjadulco\jasper_exercise_2\controller\InmateController.class
+comjadulco\jasper_exercise_2\repository\InmateRepository.class
+comjadulco\jasper_exercise_2\model\Inmate.class
+comjadulco\jasper_exercise_2\service\JasperService.class
+comjadulco\jasper_exercise_2\dto\InmateDto.class
+comjadulco\jasper_exercise_2\dto\InmateDto$Sex.class

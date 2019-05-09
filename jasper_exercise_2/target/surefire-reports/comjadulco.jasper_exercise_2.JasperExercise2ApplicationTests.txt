@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: comjadulco.jasper_exercise_2.JasperExercise2ApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 8.058 s <<< FAILURE! - in comjadulco.jasper_exercise_2.JasperExercise2ApplicationTests
+contextLoads(comjadulco.jasper_exercise_2.JasperExercise2ApplicationTests)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'inmateReport' defined in class path resource [comjadulco/jasper_exercise_2/config/ReportsConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [net.sf.jasperreports.engine.JasperReport]: Factory method 'inmateReport' threw exception; nested exception is net.sf.jasperreports.engine.JRException: java.io.FileNotFoundException: D:\JavaTraining\Jasper%20Reports\jasper_exercise_2\target\classes\foreign_inmates_report.jrxml (The system cannot find the path specified)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [net.sf.jasperreports.engine.JasperReport]: Factory method 'inmateReport' threw exception; nested exception is net.sf.jasperreports.engine.JRException: java.io.FileNotFoundException: D:\JavaTraining\Jasper%20Reports\jasper_exercise_2\target\classes\foreign_inmates_report.jrxml (The system cannot find the path specified)
+Caused by: net.sf.jasperreports.engine.JRException: java.io.FileNotFoundException: D:\JavaTraining\Jasper%20Reports\jasper_exercise_2\target\classes\foreign_inmates_report.jrxml (The system cannot find the path specified)
+Caused by: java.io.FileNotFoundException: D:\JavaTraining\Jasper%20Reports\jasper_exercise_2\target\classes\foreign_inmates_report.jrxml (The system cannot find the path specified)
+
