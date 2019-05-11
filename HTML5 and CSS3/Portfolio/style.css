@@ -1,0 +1,185 @@
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Arial';
+}
+
+p {
+    font-size: 10px;
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    background-color: #020106;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bar li {
+    float: left;
+}
+
+.nav-bar li a {
+    padding: 15px 11px;
+    color: white;
+    display: block;
+    text-decoration: none;
+}
+
+.nav-bar .right {
+    float: right;
+    font-size: 12px;
+}
+
+.about-me, .work-experience, .contact, .footer{
+    margin: 0;
+    padding: 30px 190px;
+    overflow: auto;
+}
+
+.about-me {
+    background-color: #3071A3;
+    color: white;
+    height: 450px;
+}
+
+.work-experience {
+    background-color: #D9DADE;
+    color: gray;
+    overflow: hidden;
+}
+
+.contact {
+    background-color: #15A287;
+    color: white;
+}
+
+.footer {
+    background-color: #2F3C4D;
+    color: white;
+    height: 30px;
+    padding: 0;
+    font-size: 10px;
+    padding: 30px;
+}
+
+.about-me 
+.description {
+    padding-bottom: 40px;
+}
+.about-me 
+.description h4 {
+    margin: 0; 
+    padding-bottom: 20px;
+}
+.about-me 
+.photo 
+img{
+    border-radius: 50%;
+    float:left;
+    margin-left: 30px;
+    height: 250px;
+    width: 250px;
+}
+.about-me 
+.details {
+    float: right;
+    width: 50%;
+    font-size: 13px;
+}
+
+.about-me 
+.details 
+.detail-field {
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+/*description field information*/
+.about-me 
+.details 
+.detail-field 
+.right {
+    float: right;
+    width: 50%;
+}
+
+/*links such as email and website*/
+.link {
+    color: #020106;
+
+}
+.sub-title {
+    color: #15A287;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+.sub-sub-title {
+    padding: 5px 0;
+    font-size: 12px;
+}
+.year {
+    background-color:#b6b2b2da;
+    width: 75px;
+    font-size: 10px;
+    color: #6d6d6e;
+    padding: 5px;
+    float: right;
+}
+.make-float {
+    overflow: hidden;
+}
+.sub-info {
+    margin: 5px 0;
+}
+.left {
+    float: left;
+    width: 50%;
+}
+.status {
+    float: right;
+    width: 40%;
+    margin: 60px 0;
+}
+.progress-bar {
+    height: 20px;
+    float: left;    
+}
+
+.progress-bar-bg {
+    width: 100px;
+    background-color: #cac9ce;
+}
+
+.progress-bar-fill {
+    width: 50px;
+    background-color: #020106;
+}
+
+form {
+    margin: 20px 0;
+}
+
+.social-media-contact{
+    float: right;
+}
+
+.field {
+    padding: 5px;
+}
+
+.social-media-links {
+    margin-top: 10px;
+}
+
+.submit-button {
+    background-color: #2F3C4D;
+    width: 70px;
+    padding: 10px;
+    color: white;
+    font-size: 14px;
+}
+

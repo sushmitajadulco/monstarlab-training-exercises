@@ -1,0 +1,22 @@
+.phone-panel {
+    width: 500px;
+    margin: auto;
+}
+.menu {
+    text-align: center;
+}
+
+.back-button {
+    text-align: left;
+}
+
+.contacts-view, .calculator-view, .message-view, .numbers-symbols, .uppercase-letters {
+    display: none;
+}
+.bttn {
+    margin: 3px;
+}
+.space-btn {
+    width: 200px !IMPORTANT;
+}
+

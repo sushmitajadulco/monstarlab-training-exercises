@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Seating Arrangement App</string>
+    <string name="enter_full_name">Enter Full Name</string>
+    <string name="full_name">Full Name</string>
+    <string name="register_menu">register_menu</string>
+    <string name="register">Register</string>
+    <string name="clear_list">Clear List</string>
+</resources>

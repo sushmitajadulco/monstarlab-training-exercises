@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Javascript Activity 1</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel='stylesheet' href='css/bootstrap.min.css'>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+</head>
+
+<body>
+    <div class="phone-panel panel panel-warning">
+        <div class="panel-heading">
+            <button class="btn btn-default back-button"><span class="glyphicon glyphicon-chevron-left"></span></button>
+        </div> <!-- panel-header -->
+        <div class="panel-body menu">
+            <div class="menu-view">
+                <ul class="list-group">
+                    <li class="list-group-item contact-button">Contacts</li>
+                    <li class="list-group-item calculator-button">Calculator</li>
+                    <li class="list-group-item message-button">Messages</li>
+                </ul>
+            </div>
+            <div class="contacts-view">
+                <ul class="contact-list">
+                    <li class="list-group-item" id="bea">Bea Marasigan - <span>091234567</span></li>
+                    <li class="list-group-item" id="christian">Christian Garilyo - <span>091234567</span></li>
+                    <li class="list-group-item" id="perf">Perfeli Clemente - <span>091234567</span></li>
+                </ul>
+            </div>
+
+            <div class="calculator-view">
+                <form>
+                    <!-- panel for the calc screen -->
+
+                    <input class=" form-control " id="calc-panel" name="panel" placeholder="0." disabled><br />
+
+                    <!-- User Input Buttons for the calc -->
+
+                    <input class="form-group btn btn-default bttn" type="button" name="bttn7" value="7" onclick="calC(bttn7.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="bttn8" value="8" onclick="calC(bttn8.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="bttn9" value="9" onclick="calC(bttn9.value);">
+                    <input class="form-group btn btn-danger bttn" type="button" name="bttnplus" value="+" onclick="calC(bttnplus.value);"><br />
+                    <input class="form-group btn btn-default bttn" type="button" name="bttn4" value="4" onclick="calC(bttn4.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="bttn5" value="5" onclick="calC(bttn5.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="bttn6" value="6" onclick="calC(bttn6.value);">
+                    <input class="form-group btn btn-danger bttn" type="button" name="bttnminus" value="-" onclick="calC(bttnminus.value);"><br />
+
+                    <input class="form-group btn btn-default bttn" type="button" name="bttn1" value="1" onclick="calC(bttn1.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="bttn2" value="2" onclick="calC(bttn2.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="bttn3" value="3" onclick="calC(bttn3.value);">
+                    <input class="form-group btn btn-danger bttn" type="button" name="bttnmulti" value="*" onclick="calC(bttnmulti.value);"><br />
+                    <input class="form-group btn btn-default bttn" type="button" name="bttndot" value="." onclick="calC(bttndot.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="bttn0" value="0" onclick="calC(bttn0.value);">
+                    <input class="form-group btn btn-danger bttn" type="button" name="bttnmod" value="%" onclick="calC(bttnmod.value);">
+                    <input class="form-group btn btn-danger bttn" type="button" name="bttndiv" value="/" onclick="calC(bttndiv.value);"><br />
+
+                    <!-- calling new reset function -->
+                    <input class="form-group btn btn-info bttn bttne" type="button" name="bttnclear" value="CE" onclick="CE()">
+                    <input class="form-group btn btn-warning bttn bttne" type="button" name="bttnclear" value="Del"
+                        onclick="Delete()">
+
+                    <input class="form-group btn btn-success bttn bttne" type="button" name="bttnEQL" value="=" onclick="calculate(panel.value);">
+
+                </form>
+            </div>
+
+            <div class="message-view">
+
+                <input class=" form-control " id="message-panel" name="message-panel" placeholder="" disabled><br />
+
+
+                <form class="lowercase-letters">
+                    <input class="form-group btn btn-default bttn" type="button" name="q" value="q" onclick="key(q.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="w" value="w" onclick="key(w.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="e" value="e" onclick="key(e.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="r" value="r" onclick="key(r.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="t" value="t" onclick="key(t.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="y" value="y" onclick="key(y.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="u" value="u" onclick="key(u.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="i" value="i" onclick="key(i.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="o" value="o" onclick="key(o.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="p" value="p" onclick="key(p.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="a" value="a" onclick="key(a.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="s" value="s" onclick="key(s.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="d" value="d" onclick="key(d.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="f" value="f" onclick="key(f.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="g" value="g" onclick="key(g.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="h" value="h" onclick="key(h.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="j" value="j" onclick="key(j.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="k" value="k" onclick="key(k.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="l" value="l" onclick="key(l.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="z" value="z" onclick="key(z.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="x" value="x" onclick="key(x.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="c" value="c" onclick="key(c.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="v" value="v" onclick="key(v.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="b" value="b" onclick="key(b.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="n" value="n" onclick="key(n.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="m" value="m" onclick="key(m.value);">
+
+                    <button class="btn btn-primary change-to-symbols">?123</button>
+                    <button class="btn btn-primary" id="toUppercase"><span class="glyphicon glyphicon-chevron-up"></span></button>
+                </form>
+                <form class="uppercase-letters">
+                    <input class="form-group btn btn-default bttn" type="button" name="Q" value="Q" onclick="key(Q.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="W" value="W" onclick="key(W.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="E" value="E" onclick="key(E.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="R" value="R" onclick="key(R.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="T" value="T" onclick="key(T.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="Y" value="Y" onclick="key(Y.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="U" value="U" onclick="key(U.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="I" value="I" onclick="key(I.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="O" value="O" onclick="key(O.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="P" value="P" onclick="key(P.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="A" value="A" onclick="key(A.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="S" value="S" onclick="key(S.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="D" value="D" onclick="key(D.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="F" value="F" onclick="key(F.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="G" value="G" onclick="key(G.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="H" value="H" onclick="key(H.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="J" value="J" onclick="key(J.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="K" value="K" onclick="key(K.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="L" value="L" onclick="key(L.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="Z" value="Z" onclick="key(Z.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="X" value="X" onclick="key(X.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="C" value="C" onclick="key(C.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="V" value="V" onclick="key(V.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="B" value="B" onclick="key(B.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="N" value="N" onclick="key(N.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="M" value="M" onclick="key(M.value);">
+
+                    <button class="btn btn-primary change-to-symbols">?123</button>
+                    <button class="btn btn-primary" id="toLowercase"><span class="glyphicon glyphicon-chevron-down"></span></button>
+
+                </form>
+
+                <form class="numbers-symbols">
+                    <input class="form-group btn btn-default bttn" type="button" name="num1" value="1" onclick="key(num1.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="num2" value="2" onclick="key(num2.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="num3" value="3" onclick="key(num3.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="num4" value="4" onclick="key(num4.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="num5" value="5" onclick="key(num5.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="num6" value="7" onclick="key(num7.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="num8" value="8" onclick="key(num8.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="num9" value="9" onclick="key(num9.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="num0" value="0" onclick="key(num0.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="at" value="@" onclick="key(at.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="hash" value="#" onclick="key(hash.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="dollar" value="$" onclick="key(dollar.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="und" value="_" onclick="key(und.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="and" value="&" onclick="key(and.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="dash" value="-" onclick="key(dash.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="plus" value="+" onclick="key(plus.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="op" value="(" onclick="key(op.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="cp" value=")" onclick="key(cp.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="backslash" value="/" onclick="key(backslash.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="asterisk" value="*" onclick="key(asterisk.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="dbl_qoute" value='"' onclick="key(dbl_qoute.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="quote" value="'" onclick="key(quote.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="colon" value=":" onclick="key(colon.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="semicolon" value=";" onclick="key(semicolon.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="ex" value="!" onclick="key(ex.value);">
+                    <input class="form-group btn btn-default bttn" type="button" name="question" value="?" onclick="key(question.value);">
+
+                    <button class="btn btn-primary change-to-letters">ABC</button>
+                </form>
+             
+                <form>
+                    <input class="form-group btn btn-default bttn space-btn" type="button" name="space" value=" " onclick="key(space.value);">
+                </form>
+            </div>
+        </div> <!-- panel body -->
+        <div class="panel-footer">
+            <button class="btn btn-default up-button"><span class="glyphicon glyphicon-chevron-up"></span></button>
+            <button class="btn btn-default down-button"><span class="glyphicon glyphicon-chevron-down"></span></button>
+            <button class="btn btn-default enter-button">Enter</button>
+        </div> <!-- panel footer-->
+    </div> <!-- phone panel -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
